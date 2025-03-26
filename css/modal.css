@@ -1,0 +1,64 @@
+/* Modali: Yleiset tyylit */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.627); /* Läpikuultava tummempi tausta */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Varmistaa, että modali on päällä muiden elementtien */
+}
+
+
+
+
+
+/* Modalin pääteksti */
+.modal p {
+    font-size: 24px; /* Vähemmän isoa fonttia */
+    line-height: 1.6;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.887); /* Lisää hieman varjoa */
+}
+
+/* Modalin otsikko */
+.modal h2 {
+    font-size: 32px; /* Vähän isompi fonttikoko otsikoille */
+    line-height: 1.6;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.862); /* Hieno varjo */
+}
+
+/* Responsiivisuus: pieniä säätöjä pienillä ruuduilla */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 25%; /* Leveys 90% pienillä ruuduilla */
+        height: 25%;
+        padding: 3px;
+    }
+
+    .close {
+        font-size: 35px; /* Pienennetään sulkemisnappia mobiililaitteilla */
+    }
+
+    .modal h2, .modal p {
+        font-size: 20px; /* Pienennetään tekstiä mobiililaitteilla */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        padding: 1px;
+    }
+
+    .close {
+        font-size: 30px; /* Pienennetään vielä sulkemispainiketta */
+    }
+
+    .modal h2, .modal p {
+        font-size: 18px; /* Pienempi fonttikoko mobiilissa */
+    }
+}
